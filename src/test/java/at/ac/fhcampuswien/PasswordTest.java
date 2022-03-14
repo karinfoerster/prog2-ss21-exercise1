@@ -60,4 +60,12 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void noSpecialCharacters()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("Password3125");
+        assertFalse(result);
+    }
+
 }
