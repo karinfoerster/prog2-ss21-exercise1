@@ -100,4 +100,12 @@ public class PasswordTest {
         assertTrue(result);
     }
 
+    @Test
+    public void containsMissingNumber()
+    {
+        Password password = new Password();
+        boolean result = password.containsNumber("Password!!");
+        assertFalse(result);
+    }
+
 }
