@@ -84,4 +84,20 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void checkLengthValid()
+    {
+        Password password = new Password();
+        boolean result = password.checkLength("24973807");
+        assertTrue(result);
+    }
+
+    @Test
+    public void containsValidNumber()
+    {
+        Password password = new Password();
+        boolean result = password.containsNumber("Password01!!");
+        assertTrue(result);
+    }
+
 }
