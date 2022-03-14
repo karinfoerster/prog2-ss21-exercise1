@@ -22,8 +22,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void tooShort()
-    {
+    public void tooShort() {
         Password password = new Password();
         boolean result = password.checkPassword("Spw1!!");
         assertFalse(result);
