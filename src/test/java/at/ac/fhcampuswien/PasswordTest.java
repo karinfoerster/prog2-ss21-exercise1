@@ -68,4 +68,12 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void hasSequenceNumber()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("Password1234!!");
+        assertFalse(result);
+    }
+
 }
