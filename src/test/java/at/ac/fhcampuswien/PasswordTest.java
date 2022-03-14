@@ -36,6 +36,15 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void noUppercase()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("password0131!!");
+        assertFalse(result);
+    }
+
+
 
 
 }
