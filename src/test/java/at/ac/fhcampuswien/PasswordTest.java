@@ -20,4 +20,12 @@ public class PasswordTest {
         boolean result = password.checkPassword("pAsSword23//");
         assertTrue(result);
     }
+
+    @Test
+    public void tooShort()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("Spw1!!");
+        assertFalse(result);
+    }
 }
