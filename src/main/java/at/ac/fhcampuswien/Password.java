@@ -6,7 +6,8 @@ public class Password {
                 && checkLength(password)
                 && containsNumber(password)
                 && hasNoRepeatNumbers(password)
-                && containsLowerAndUppercase(password);
+                && containsLowerAndUppercase(password)
+                && containsSpecialChar(password);
 
     }
 
@@ -62,5 +63,11 @@ public class Password {
         return password.matches(".*[a-z].*")
                 && password.matches(".*[A-Z].*");
     }
+
+    public boolean containsSpecialChar(String password)
+    {
+        return password.matches(".*[()#$?!%/@]");
+    }
+
 
 }
