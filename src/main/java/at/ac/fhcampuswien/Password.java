@@ -7,7 +7,8 @@ public class Password {
                 && containsNumber(password)
                 && hasNoRepeatNumbers(password)
                 && containsLowerAndUppercase(password)
-                && containsSpecialChar(password);
+                && containsSpecialChar(password)
+                && hasNoSequenceNumber(password);
 
     }
 
@@ -67,6 +68,18 @@ public class Password {
     public boolean containsSpecialChar(String password)
     {
         return password.matches(".*[()#$?!%/@]");
+    }
+
+    public boolean hasNoSequenceNumber(String password)
+    {
+        return !password.contains("012")
+                && !password.contains("123")
+                && !password.contains("234")
+                && !password.contains("345")
+                && !password.contains("456")
+                && !password.contains("567")
+                && !password.contains("678")
+                && !password.contains("789");
     }
 
 
