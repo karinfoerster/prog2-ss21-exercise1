@@ -32,9 +32,10 @@ public class PasswordTest {
     public void tooLong()
     {
         Password password = new Password();
-        boolean result = password.checkPassword("ThisPasswordIsTooLong87!!");
+        boolean result = password.checkPassword("SorryThisPasswordIsTooLong87!!");
         assertFalse(result);
     }
+
 
 
 }
