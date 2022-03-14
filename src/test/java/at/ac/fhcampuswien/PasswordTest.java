@@ -44,7 +44,20 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void noLowercase()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("THISISMYPASSWORD24!!");
+        assertFalse(result);
+    }
 
-
+    @Test
+    public void noNumbers()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("Password!!");
+        assertFalse(result);
+    }
 
 }
