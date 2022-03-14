@@ -27,4 +27,14 @@ public class PasswordTest {
         boolean result = password.checkPassword("Spw1!!");
         assertFalse(result);
     }
+
+    @Test
+    public void tooLong()
+    {
+        Password password = new Password();
+        boolean result = password.checkPassword("ThisPasswordIsTooLong87!!");
+        assertFalse(result);
+    }
+
+
 }
