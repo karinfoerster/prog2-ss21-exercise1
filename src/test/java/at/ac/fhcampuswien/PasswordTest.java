@@ -6,7 +6,7 @@ public class PasswordTest {
 
     //Password.checkPassword Tests
     @Test
-    public void validPassword1()
+    public void validPassword1() //checking from a valid password
     {
         Password password = new Password();
         boolean result = password.checkPassword("Password01!!");
@@ -14,22 +14,23 @@ public class PasswordTest {
     }
 
     @Test
-    public void validPassword2()
+    public void validPassword2() //example and checking a correct password
     {
         Password password = new Password();
-        boolean result = password.checkPassword("pAsSword23//");
+        boolean result = password.checkPassword("pAsSword23//!!");
         assertTrue(result);
     }
 
     @Test
-    public void tooShort() {
+    public void tooShort() //testing if the password is too short
+    {
         Password password = new Password();
         boolean result = password.checkPassword("Spw1!!");
         assertFalse(result);
     }
 
     @Test
-    public void tooLong()
+    public void tooLong() //testing if the password is too long
     {
         Password password = new Password();
         boolean result = password.checkPassword("SorryThisPasswordIsTooLong87!!");
@@ -37,7 +38,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void noUppercase()
+    public void noUppercase() //testcase for password without uppercase
     {
         Password password = new Password();
         boolean result = password.checkPassword("password0131!!");
@@ -45,7 +46,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void noLowercase()
+    public void noLowercase() //testcase for password without lowercase
     {
         Password password = new Password();
         boolean result = password.checkPassword("THISISMYPASSWORD24!!");
@@ -53,7 +54,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void noNumbers()
+    public void noNumbers() //testcase for password without a number
     {
         Password password = new Password();
         boolean result = password.checkPassword("Password!!");
@@ -61,7 +62,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void noSpecialCharacters()
+    public void noSpecialCharacters() //testcase for password without a special character
     {
         Password password = new Password();
         boolean result = password.checkPassword("Password3125");
@@ -69,7 +70,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void hasSequenceNumber()
+    public void hasSequenceNumber() //testing if there is a sequence number in the password
     {
         Password password = new Password();
         boolean result = password.checkPassword("Password1234!!");
@@ -77,7 +78,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void numbersRepeat()
+    public void numbersRepeat() //testcase to check if there is a repeating number
     {
         Password password = new Password();
         boolean result = password.checkPassword("Password7777!!");
@@ -85,7 +86,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void checkLengthValid()
+    public void checkLengthValid() //test to check if the length is valid
     {
         Password password = new Password();
         boolean result = password.checkLength("24973807");
@@ -93,7 +94,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void containsValidNumber()
+    public void containsValidNumber() //testcase to check if the number valid
     {
         Password password = new Password();
         boolean result = password.containsNumber("Password01!!");
@@ -101,7 +102,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void containsMissingNumber()
+    public void containsMissingNumber() //testcase if there is a missing number
     {
         Password password = new Password();
         boolean result = password.containsNumber("Password!!");
@@ -109,7 +110,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void containsValidLowerAndUppercase()
+    public void containsValidLowerAndUppercase() //test to check if there are lower and uppercase in the password
     {
         Password password = new Password();
         boolean result = password.containsLowerAndUppercase("Password01!!");
@@ -117,7 +118,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void  containsFailedLowerAndUppercase1()
+    public void  containsFailedLowerAndUppercase1() //test if there is no uppercase
     {
         Password password = new Password();
         boolean result = password.containsLowerAndUppercase("password01!!");
@@ -125,7 +126,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void containsFailedLowerAndUppercase2()
+    public void containsFailedLowerAndUppercase2() //test for missing lowercase
     {
         Password password = new Password();
         boolean result = password.containsLowerAndUppercase("PASSWORD01!!");
@@ -133,7 +134,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void containsSpecialCharValid()
+    public void containsSpecialCharValid() //checks if there is a special char in the password
     {
         Password password = new Password();
         boolean result = password.containsSpecialChar("Password01!!");
@@ -141,7 +142,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void containsSpecialCharFailed()
+    public void containsSpecialCharFailed() //testcase for missing char in the password
     {
         Password password = new Password();
         boolean result = password.containsSpecialChar("Password01");
@@ -149,7 +150,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void hasSequenceNumberValid()
+    public void hasSequenceNumberValid() //testcase to check if there is a sequence number in the password
     {
         Password password = new Password();
         boolean result = password.hasNoSequenceNumber("Password01!!");
@@ -157,7 +158,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void hasSequenceNumberFailed()
+    public void hasSequenceNumberFailed() //testcase with a sequence number
     {
         Password password = new Password();
         boolean result = password.hasNoSequenceNumber("Password012!!");
@@ -165,7 +166,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void hasNoRepeatNumberValid()
+    public void hasNoRepeatNumberValid() //testcase without a repeating number
     {
         Password password = new Password();
         boolean result = password.hasNoRepeatNumbers("Password01!!");
@@ -173,7 +174,7 @@ public class PasswordTest {
     }
 
     @Test
-    public void hasNoRepeatNumberFailed()
+    public void hasNoRepeatNumberFailed() //testcase with a repeating number
     {
         Password password = new Password();
         boolean result = password.hasNoRepeatNumbers("Password7777!!");
