@@ -172,4 +172,12 @@ public class PasswordTest {
         assertTrue(result);
     }
 
+    @Test
+    public void hasNoRepeatNumberFailed()
+    {
+        Password password = new Password();
+        boolean result = password.hasNoRepeatNumbers("Password7777!!");
+        assertFalse(result);
+    }
+
 }
