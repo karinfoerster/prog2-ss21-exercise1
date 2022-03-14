@@ -132,4 +132,12 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void containsSpecialCharValid()
+    {
+        Password password = new Password();
+        boolean result = password.containsSpecialChar("Password01");
+        assertFalse(result);
+    }
+
 }
