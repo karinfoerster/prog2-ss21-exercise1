@@ -136,6 +136,14 @@ public class PasswordTest {
     public void containsSpecialCharValid()
     {
         Password password = new Password();
+        boolean result = password.containsSpecialChar("Password01!!");
+        assertTrue(result);
+    }
+
+    @Test
+    public void containsSpecialCharFailed()
+    {
+        Password password = new Password();
         boolean result = password.containsSpecialChar("Password01");
         assertFalse(result);
     }
