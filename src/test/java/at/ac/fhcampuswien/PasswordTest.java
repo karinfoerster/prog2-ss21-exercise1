@@ -108,4 +108,28 @@ public class PasswordTest {
         assertFalse(result);
     }
 
+    @Test
+    public void containsValidLowerAndUppercase()
+    {
+        Password password = new Password();
+        boolean result = password.containsLowerAndUppercase("Password01!!");
+        assertTrue(result);
+    }
+
+    @Test
+    public void  containsFailedLowerAndUppercase1()
+    {
+        Password password = new Password();
+        boolean result = password.containsLowerAndUppercase("password01!!");
+        assertFalse(result);
+    }
+
+    @Test
+    public void containsFailedLowerAndUppercase2()
+    {
+        Password password = new Password();
+        boolean result = password.containsLowerAndUppercase("PASSWORD01!!");
+        assertFalse(result);
+    }
+
 }
