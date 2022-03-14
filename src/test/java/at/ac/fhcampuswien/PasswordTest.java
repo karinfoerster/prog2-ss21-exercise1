@@ -156,4 +156,12 @@ public class PasswordTest {
         assertTrue(result);
     }
 
+    @Test
+    public void hasSequenceNumberFailed()
+    {
+        Password password = new Password();
+        boolean result = password.hasNoSequenceNumber("Password012!!");
+        assertFalse(result);
+    }
+
 }
